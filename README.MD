@@ -82,4 +82,7 @@ msc_edinburgh_thesis_material_submission
 * Model evaluation for finance dataset are mae_eval_complete_vol_surface.py and test_recon_mae_and_gridbased_completion.py
 
 #### Trained Model files
-* found in the respective subfolders in the model_files directory.
+* Found in the respective subfolders in the model_files directory.
+
+
+#### As the file sizes are too large, please refer to this google drive link for all info: https://drive.google.com/drive/folders/1J2onGDemUzY0jZ3kD4JGXH6voUvAip4N?usp=drive_link
