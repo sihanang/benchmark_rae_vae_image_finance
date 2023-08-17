@@ -15,7 +15,7 @@ The msc_edinburgh_thesis_material_submission folder contains two folders:
 * scripts_and_model_related_files
 
 #### To navigate around the data folder structure
-
+```
 msc_edinburgh_thesis_material_submission
     |____ data
             |___ finance_data
@@ -49,9 +49,9 @@ msc_edinburgh_thesis_material_submission
 			    |	
 			    |___test_recon
 
-
+```
 #### To navigate around the scripts_and_model_related_files folder structure
-
+```
 msc_edinburgh_thesis_material_submission
     |____ scripts_and_model_related_files 
             |___ scripts
@@ -64,7 +64,7 @@ msc_edinburgh_thesis_material_submission
 		  |
 		  |___csv files__ .pth model files for fashion MNIST dataset
 
-
+```
 #### Training Models
 * Found scripts_and_model_related_files
 * Model training scripts are named starting with the model name followed by the data set or domain
