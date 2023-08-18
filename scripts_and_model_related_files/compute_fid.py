@@ -472,7 +472,7 @@ def cars_compute_fid_main(modelfile, latent_dims,  model_type = 'rae', model_sel
     
     print('FID Score for Test Reconstruction for Cars is {}'.format(fid_score_cars_recon))
     print('RNDMN FID Score for Cars is: {}'.format(fid_score_cars_rndmN))
-    print('GMM FID Score for Cars is: {}'.format(fid_score_cars_rndmN))
+    print('GMM FID Score for Cars is: {}'.format(fid_score_cars_gmm ))
     
     
     return fid_score_cars_recon, fid_score_cars_rndmN, fid_score_cars_gmm
