@@ -358,25 +358,26 @@ if __name__ == '__main__':
     #################################################################################################################
     
     # For ease of exposition, we will also use latent dimension = 4 models only for both approaches
+    fin_mod_dir = './model_files/finance_models/'
     
     # For the grid-based approach
-    vae_grid = generation_mae('vae_vol_grid_149lat4_batchsize32_try_2.pth', 'vae', False, train_tensor,test_tensor, 4,daysexp_arr,delta_arr,'cuda','grid',test_tensor_original,train_mean, train_std)
-    rael2_grid = generation_mae('rae_vol_gridl2_149lat4_batchsize32_try_1.pth', 'rae', False, train_tensor,test_tensor, 4,daysexp_arr,delta_arr,'cuda','grid',test_tensor_original,train_mean, train_std)
-    raesn_grid = generation_mae('rae_vol_gridspec_norm_149lat4_batchsize32_try_1.pth', 'rae', True, train_tensor,test_tensor, 4,daysexp_arr,delta_arr,'cuda','grid',test_tensor_original,train_mean, train_std)
-    raegp_grid = generation_mae('rae_vol_gridgrad_pen_149lat4_batchsize32_try_1.pth', 'rae', False, train_tensor,test_tensor, 4,daysexp_arr,delta_arr,'cuda','grid',test_tensor_original,train_mean, train_std)
-    wae_grid = generation_mae('wae_vol_grid_149latent4_batchsize32_config_1.pth', 'wae', False, train_tensor,test_tensor, 4,daysexp_arr,delta_arr,'cuda','grid',test_tensor_original,train_mean, train_std)
-    ae_grid = generation_mae('rae_vol_gridl2_149lat4_batchsize32_ae.pth', 'ae', False, train_tensor,test_tensor, 4,daysexp_arr,delta_arr,'cuda','grid',test_tensor_original,train_mean, train_std)
+    vae_grid = generation_mae(fin_mod_dir+'vae_vol_grid_149lat4_batchsize32_try_2.pth', 'vae', False, train_tensor,test_tensor, 4,daysexp_arr,delta_arr,'cuda','grid',test_tensor_original,train_mean, train_std)
+    rael2_grid = generation_mae(fin_mod_dir+'rae_vol_gridl2_149lat4_batchsize32_try_1.pth', 'rae', False, train_tensor,test_tensor, 4,daysexp_arr,delta_arr,'cuda','grid',test_tensor_original,train_mean, train_std)
+    raesn_grid = generation_mae(fin_mod_dir+'rae_vol_gridspec_norm_149lat4_batchsize32_try_1.pth', 'rae', True, train_tensor,test_tensor, 4,daysexp_arr,delta_arr,'cuda','grid',test_tensor_original,train_mean, train_std)
+    raegp_grid = generation_mae(fin_mod_dir+'rae_vol_gridgrad_pen_149lat4_batchsize32_try_1.pth', 'rae', False, train_tensor,test_tensor, 4,daysexp_arr,delta_arr,'cuda','grid',test_tensor_original,train_mean, train_std)
+    wae_grid = generation_mae(fin_mod_dir+'wae_vol_grid_149latent4_batchsize32_config_1.pth', 'wae', False, train_tensor,test_tensor, 4,daysexp_arr,delta_arr,'cuda','grid',test_tensor_original,train_mean, train_std)
+    ae_grid = generation_mae(fin_mod_dir+'rae_vol_gridl2_149lat4_batchsize32_ae.pth', 'ae', False, train_tensor,test_tensor, 4,daysexp_arr,delta_arr,'cuda','grid',test_tensor_original,train_mean, train_std)
     
     grid_results_df = pd.concat([vae_grid, rael2_grid, raesn_grid, raegp_grid, wae_grid, ae_grid])
     grid_results_df.insert(0, 'Model', ['VAE','RAE-L2', 'RAE-SN','RAE-GP','WAE','AE'])
     
     # For the pointwise approach
-    vae_point = generation_mae('vae_vol_point_149lat4_batchsize32_try_2.pth', 'vae', False, train_tensor,test_tensor, 4,daysexp_arr,delta_arr,'cuda','point',test_tensor_original,train_mean, train_std)
-    rael2_point = generation_mae('rae_vol_pointl2_149lat4_batchsize32_try_1.pth', 'rae', False, train_tensor,test_tensor, 4,daysexp_arr,delta_arr,'cuda','point',test_tensor_original,train_mean, train_std)
-    raesn_point = generation_mae('rae_vol_pointspec_norm_149lat4_batchsize32_try_1.pth', 'rae', True, train_tensor,test_tensor, 4,daysexp_arr,delta_arr,'cuda','point',test_tensor_original,train_mean, train_std)
-    raegp_point = generation_mae('rae_vol_pointgrad_pen_149lat4_batchsize32_try_1.pth', 'rae', False, train_tensor,test_tensor, 4,daysexp_arr,delta_arr,'cuda','point',test_tensor_original,train_mean, train_std)
-    wae_point = generation_mae('wae_vol_point_149latent4_batchsize32_config_1.pth', 'wae', False, train_tensor,test_tensor, 4,daysexp_arr,delta_arr,'cuda','point',test_tensor_original,train_mean, train_std)
-    ae_point = generation_mae('rae_vol_pointl2_149lat4_batchsize32_ae.pth', 'ae', False, train_tensor,test_tensor, 4,daysexp_arr,delta_arr,'cuda','point',test_tensor_original,train_mean, train_std)
+    vae_point = generation_mae(fin_mod_dir+'vae_vol_point_149lat4_batchsize32_try_2.pth', 'vae', False, train_tensor,test_tensor, 4,daysexp_arr,delta_arr,'cuda','point',test_tensor_original,train_mean, train_std)
+    rael2_point = generation_mae(fin_mod_dir+'rae_vol_pointl2_149lat4_batchsize32_try_1.pth', 'rae', False, train_tensor,test_tensor, 4,daysexp_arr,delta_arr,'cuda','point',test_tensor_original,train_mean, train_std)
+    raesn_point = generation_mae(fin_mod_dir+'rae_vol_pointspec_norm_149lat4_batchsize32_try_1.pth', 'rae', True, train_tensor,test_tensor, 4,daysexp_arr,delta_arr,'cuda','point',test_tensor_original,train_mean, train_std)
+    raegp_point = generation_mae(fin_mod_dir+'rae_vol_pointgrad_pen_149lat4_batchsize32_try_1.pth', 'rae', False, train_tensor,test_tensor, 4,daysexp_arr,delta_arr,'cuda','point',test_tensor_original,train_mean, train_std)
+    wae_point = generation_mae(fin_mod_dir+'wae_vol_point_149latent4_batchsize32_config_1.pth', 'wae', False, train_tensor,test_tensor, 4,daysexp_arr,delta_arr,'cuda','point',test_tensor_original,train_mean, train_std)
+    ae_point = generation_mae(fin_mod_dir+'rae_vol_pointl2_149lat4_batchsize32_ae.pth', 'ae', False, train_tensor,test_tensor, 4,daysexp_arr,delta_arr,'cuda','point',test_tensor_original,train_mean, train_std)
     
     point_results_df = pd.concat([vae_point, rael2_point, raesn_point, raegp_point, wae_point, ae_point])
     point_results_df.insert(0, 'Model', ['VAE','RAE-L2', 'RAE-SN','RAE-GP','WAE','AE'])
