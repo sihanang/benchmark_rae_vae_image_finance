@@ -48,7 +48,7 @@ class myContrastAdj:
 
 
 
-epochs = 100
+epochs = 85
 batch_size = 64 # paper uses 100, for try 5 i did 500..
 lr = 0.0005 # The learning rate from paper is 0.001
 
@@ -565,20 +565,20 @@ def model_run(config, train_loader = train_dataloader, val_loader = val_dataload
 
 
 ################### RAE RUNS ##################################
-rae, train_loss, val_loss= model_run({'beta':beta, 'lamb':lamb}, train_dataloader, val_dataloader, epochs = 85, lr = lr, 
+rae, train_loss, val_loss= model_run({'beta':beta, 'lamb':lamb}, train_dataloader, val_dataloader, epochs = epochs, lr = lr, 
                                         reg_type = 'l2',
                                         PATH = './', latent_dims = 32, appendum='lat32_batchsize64aa_final')
 
-rae, train_loss, val_loss= model_run({'beta':1e-5, 'lamb':0}, train_dataloader, val_dataloader, epochs = 85, lr = 5e-4, 
+rae, train_loss, val_loss= model_run({'beta':1e-5, 'lamb':0}, train_dataloader, val_dataloader, epochs = epochs, lr = 5e-4, 
                                         reg_type = 'spec_norm',
                                         PATH = './', latent_dims = 32, appendum='lat32_batchsize64_8_rerun')
 
-rae, train_loss, val_loss= model_run({'beta':1e-6, 'lamb':1e-9}, train_dataloader, val_dataloader, epochs = 85, lr = lr, 
+rae, train_loss, val_loss= model_run({'beta':1e-6, 'lamb':1e-9}, train_dataloader, val_dataloader, epochs = epochs, lr = lr, 
                                         reg_type = 'grad_pen',
                                         PATH = './', latent_dims = 32, appendum='lat32_batchsize64ab_final')
 
 
 ############## AE is run here ###################################
-ae, train_loss, val_loss= model_run({'beta':0, 'lamb':0}, train_dataloader, val_dataloader, epochs = 85, lr = lr, 
+ae, train_loss, val_loss= model_run({'beta':0, 'lamb':0}, train_dataloader, val_dataloader, epochs = epochs, lr = lr, 
                                         reg_type = 'l2',
                                         PATH = './', latent_dims=32, appendum='lat32_batchsize64_AE')
