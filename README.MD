@@ -50,6 +50,8 @@ msc_edinburgh_thesis_material_submission
 			    |___test_recon
 
 ```
+Due to file size limitation, all other data are found in the google drive link: https://drive.google.com/drive/folders/1J2onGDemUzY0jZ3kD4JGXH6voUvAip4N?usp=sharing
+
 #### To navigate around the scripts_and_model_related_files folder structure
 ```
 msc_edinburgh_thesis_material_submission
