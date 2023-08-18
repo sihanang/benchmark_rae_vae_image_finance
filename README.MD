@@ -80,6 +80,7 @@ msc_edinburgh_thesis_material_submission
 * Model Evaluation for images are found in compute_fid.py which depends on fid.py, model_repo.py and inception.py 
   as well as the pretrained model file pt_inception-2015-12-05-6726825d.pth. Cars models depends upon cars_data_gen.py and cars_preprocess.py.
 * Model evaluation for finance dataset are mae_eval_complete_vol_surface.py, test_recon_mae_and_gridbased_completion.py and finance_gen_check.py
+* Due to file size limitation, some of the files like pt_inception-2015-12-05-6726825d.pth are uploaded on the google drive: https://drive.google.com/drive/folders/1J2onGDemUzY0jZ3kD4JGXH6voUvAip4N?usp=sharing
 
 #### Trained Model files
 * Found in the respective subfolders in the model_files directory.
